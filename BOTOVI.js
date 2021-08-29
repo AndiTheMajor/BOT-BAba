@@ -7,7 +7,6 @@ const prefix = '_';
  
 const fs = require('fs');
 const { execute } = require('./commands/izbaci');
-
  
 client.commands = new Discord.Collection();
 
@@ -21,7 +20,6 @@ for(const file of commandFiles){
  
     client.commands.set(command.name, command);
 }
- 
  
 client.once('ready', () => {
     console.log('Andrijica is online!');
@@ -98,5 +96,16 @@ client.on('message', message =>{
         client.commands.get("warns").execute(message, args);
     }
 });
+
+mongoose.connect(procces.env,MONGODB_SRV, {
+    userNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+}).then(()=>{
+    console.log('Povezan na db');
+}).cache((err) =>{
+    console.log(err);;
+});
+
  
 client.login(process.env.token);
