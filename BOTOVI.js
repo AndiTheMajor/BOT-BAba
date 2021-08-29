@@ -103,9 +103,6 @@ mongoose.connect(process.env.MONGODB_SRV, {
     useFindAndModify: false
 }).then(()=>{
     console.log('Povezan na db');
-}).cache((err) =>{
-    console.log(err);;
-});
+})
 
- 
 client.login(process.env.token);
