@@ -1,11 +1,24 @@
 const Discord = require('discord.js');
+const mongoose = require('mongoose');
+
 const client = new Discord.Client();
- 
+
 const prefix = '_';
  
 const fs = require('fs');
+const { execute } = require('./commands/izbaci');
+
  
 client.commands = new Discord.Collection();
+
+require("discord-buttons")(client);
+
+
+mongoose.connect(process.env.MONGODB_SRV, {
+    useNewUrlParser: true
+});
+
+const disbut = require("discord-buttons");
  
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
@@ -18,19 +31,22 @@ for(const file of commandFiles){
 client.once('ready', () => {
     console.log('Andrijica is online!');
 });
- 
+
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
- 
+   
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
 
+    if(command === 'test'){
+        client.commands.get('test').execute(message, args, Discord);
+    }
     if(command === 'ping'){
-        client.commands.get('ping').execute(message, args);
+        client.commands.get('ping').execute(message, args,);
     }  
-    if(command === 'clear'){
-        client.commands.get('clear').execute(message, args);
+    if(command === 'obrisi'){
+        client.commands.get('obrisi').execute(message, args);
     }
     if(command === 'pedo'){
         client.commands.get('pedo').execute(message, args);
@@ -38,17 +54,17 @@ client.on('message', message =>{
     if(command === 'fanboy'){
         client.commands.get('fanboy').execute(message, args);
     }
-    if(command === 'help'){
-        client.commands.get('help').execute(message, args);
+    if(command === 'pomoc'){
+        client.commands.get('pomoc').execute(message, args, Discord);
     }
-    if(command === 'kick'){
-        client.commands.get('kick').execute(message, args);
+    if(command === 'izbaci'){
+        client.commands.get('izbaci').execute(message, args);
     }
     if(command === 'ban'){
         client.commands.get('ban').execute(message, args);
     }
-    if(command === 'mute'){
-        client.commands.get('mute').execute(message, args);
+    if(command === 'utisaj'){
+        client.commands.get('utisaj').execute(message, args);
     }
     if(command === 'unmute'){
         client.commands.get('unmute').execute(message, args);
@@ -56,8 +72,32 @@ client.on('message', message =>{
     if(command === 'infractions'){
         client.commands.get('infractions').execute(message, args);
     }
-    if(command === 'warn'){
-        client.commands.get('warn').execute(message, args);
+    if(command === 'upozori'){
+        client.commands.get('upozori').execute(message, args);
+    }
+    if(command == 'avatar'){
+        client.commands.get('avatar').execute(message, args);
+    }
+    if(command == 'av'){
+        client.commands.get('av').execute(message, args);
+    }
+    if(command == 'mim'){
+        client.commands.get('mim').execute(message, args);
+    }
+    if(command === "pomoc-zabava"){
+        client.commands.get("pomoc-zabava").execute(message, args, Discord);
+    }
+    if(command === "pomoc-moderacija"){
+        client.commands.get("pomoc-moderacija").execute(message, args, Discord);
+    }
+    if(command == '8ball'){
+        client.commands.get('8ball').execute(message, args);
+    }
+    if(command == 'gej'){
+        client.commands.get('gej').execute(message, args);
+    }
+    if(command === "simp"){
+        client.commands.get("simp").execute(message, args);
     }
 });
  

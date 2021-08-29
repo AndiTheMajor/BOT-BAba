@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'clear',
+    name: 'obrisi',
     description: "Ovo je _clear komanda",
     async execute(message, args) {
         if (message.member.permissions.has("KICK_MEMBERS")) {
@@ -13,7 +13,7 @@ module.exports = {
 
             await message.channel.messages.fetch({ limit: args[0] }).then(messages => {
                 message.channel.bulkDelete(messages);
-                message.channel.send(" **Uspesno obrisano " + "`" + args[0] + " messages`**")
+                message.channel.send(" **Uspesno obrisano " + "`" + args[0] + " poruka`**")
                     .then(msg => {
                         msg.delete({ timeout: 3000 })
                     })

@@ -1,3 +1,5 @@
+const { MessageEmbed } = require('discord.js');
+
 module.exports = {
     name: 'ban',
     description: "Ovo je _ban komanda.",
@@ -7,7 +9,8 @@ module.exports = {
         if(member){
             const memberTarget = message.guild.members.cache.get(member.id);
             memberTarget.ban();
-            message.channel.send(`Member je banovan`)
+            message.channel.send('Member je banovan');
+
         }else{
             message.reply('Molim te taguj koga hoces da banujes!');
             }

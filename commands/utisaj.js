@@ -1,10 +1,10 @@
 const ms = require('ms');
 module.exports = {
-    name: 'mute',
+    name: 'utisaj',
     description: "Ovo je _mute komanda",
     execute(message, args) {
         const target = message.mentions.users.first();
-        if (message.member.permissions.has("BAN_MEMBERS")) {
+        if (message.member.permissions.has("ADMINISTRATOR")) {
         if (target) {
  
             let mainRole = message.guild.roles.cache.find(role => role.name === 'Member');
@@ -30,5 +30,5 @@ module.exports = {
             message.reply('Molim te taguj koga hoces da utisas.');
             }
         }
-    }
-}
+    }       
+}     
