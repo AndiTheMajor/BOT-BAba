@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const mongoose = require('mongoose');
 
+mongoose.connect(process.env.MONGODB_SRV, {
+    useNewUrlParser: true
+});
+
 const client = new Discord.Client();
 
 const prefix = '_';
