@@ -18,8 +18,6 @@ mongoose.connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true
 });
 
-const disbut = require("discord-buttons");
- 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
