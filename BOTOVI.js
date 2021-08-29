@@ -97,7 +97,7 @@ client.on('message', message =>{
     }
 });
 
-mongoose.connect(process.env,MONGODB_SRV, {
+mongoose.connect(process.env.MONGODB_SRV, {
     userNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
