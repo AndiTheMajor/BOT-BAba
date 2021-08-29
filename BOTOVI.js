@@ -94,6 +94,9 @@ client.on('message', message =>{
     if(command === "simp"){
         client.commands.get("simp").execute(message, args);
     }
+    if(command === "warns"){
+        client.commands.get("warns").execute(message, args);
+    }
 });
  
 client.login(process.env.token);
