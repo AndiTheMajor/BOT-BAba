@@ -11,9 +11,6 @@ const { execute } = require('./commands/izbaci');
  
 client.commands = new Discord.Collection();
 
-require("discord-buttons")(client);
-
-
 mongoose.connect(process.env.MONGODB_SRV, {
     useNewUrlParser: true
 });
