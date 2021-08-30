@@ -1,3 +1,4 @@
+const { execute } = require('./izbaci');
 const Command = require('/app/commands/8ball.js');
 
 const answers = [
@@ -6,8 +7,8 @@ const answers = [
 
 module.exports = {
     name: '8ball',
-    
-    async run(msg, ...question) {
+
+    async execute(msg, ...question) {
         return msg.reply(question.join(' ').endsWith('?') ?
         `${answers[Math.floor(Math.random() * answers.length)]}` :
         'Do nije ptanje,molim te stavi "?" na kraju recebuce');
