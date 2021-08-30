@@ -11,7 +11,7 @@ module.exports = {
     async execute(msg, ...question) {
         return msg.reply(question.join(' ').endsWith('?') ?
         `${answers[Math.floor(Math.random() * answers.length)]}` :
-        'Do nije ptanje,molim te stavi "?" na kraju recebuce');
+        'To nije ptanje,molim te stavi "?" na kraju recenice.');
     }
 
 };
