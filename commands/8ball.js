@@ -3,7 +3,7 @@ const { execute } = require("./izbaci");
 module.exports = {
     name: "8ball",
     description: "Ovo je _8ball komanda",
-    execute(message, args){
+    async execute(message, args){
         let answers = [
             'As I see it, yes.',
             'Ask again later.',
