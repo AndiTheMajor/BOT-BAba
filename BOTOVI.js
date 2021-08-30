@@ -1,9 +1,4 @@
 const Discord = require('discord.js');
-const mongoose = require('mongoose');
-
-mongoose.connect(process.env.MONGODB_SRV, {
-    useNewUrlParser: true
-});
 
 const client = new Discord.Client();
 
@@ -13,10 +8,6 @@ const fs = require('fs');
 const { execute } = require('./commands/izbaci');
  
 client.commands = new Discord.Collection();
-
-mongoose.connect(process.env.MONGODB_SRV, {
-    useNewUrlParser: true
-});
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
@@ -100,13 +91,5 @@ client.on('message', message =>{
         client.commands.get("warns").execute(message, args);
     }
 });
-
-mongoose.connect(process.env.MONGODB_SRV, {
-    userNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-}).then(()=>{
-    console.log('Povezan na db');
-})
 
 client.login(process.env.token);

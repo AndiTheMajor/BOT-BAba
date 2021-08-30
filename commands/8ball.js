@@ -1,20 +1,20 @@
-const Discord = require('discord.js')
+const {MessageEmbed, Message} = require('discord.js');
 
 module.exports = {
     name: '8ball',
-    description: "Ovo je _8ball komanda.",
-    async execute(message, args) {
-        if(!args[0]) return message.reply('Molim te napisi pitanje')
-        let replies = ["da", "ne", "izgleda ok", "naravno", "definitivno", "bolje da ti ne kazem", "Izgleda lose", "nema sanse", "samo danas", "ne danas", "nazalost da", "nazalost ne", "mozda", "pitaj me kasnije"];
+    run: async (bot, message, args) => {
+        const answers = [
+            'Izvesno je', 'Bez sumnje', 'Definitivno', 'Koliko ja vidim,da', 'Verovatno', 'Da', 'Pitaj me kasnije', 'Bolje da ti ne kazem', 'Nemogu predvideti to', 'Pitaj me ponovo', 'Ne racunaj na to', 'Moj odgovor je ne', 'Moji izvori kazu ne', 'Sumnjam', 'Nikada'
+       ];
+       const answers = answer[Math.floor(Math.random() * answers.length)];
 
-        let question = args.slice().join(" ");
-        let result = Math.floor((Math.random() * replies.lenght));
-        let ballembed = new Discord.MessageEmbed()
-        .setAuthor(`8 ball`)
-        .setColor("#1C1C1C")
-        .addField("Question", question)
-        .addField("Answer", replies[replies])
-
-        message.channel.send(ballembed);
+      return message.channel.send(
+           new MessageEmbed()
+                .setAuthor('8ball')
+                .setDescription(
+                    `Pitanje: ${args.join(' ')}\n Odgovor: ${a}`
+                )
+                .setColor('RANDOM')
+       );
     }
 }
