@@ -8,7 +8,7 @@ module.exports = {
        ];
        const a = answers[Math.floor(Math.random() * answers.length)];
 
-      return message.channel.send(
+      return message.reply(
            new MessageEmbed()
                 .setAuthor('8ball')
                 .setDescription(
