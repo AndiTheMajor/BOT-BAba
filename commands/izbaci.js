@@ -8,9 +8,9 @@ module.exports = {
             if(member){
                 const memberTarget = message.guild.members.cache.get(member.id);
                 memberTarget.kick();
-                message.channel.send(`Clan je kikan`);
+                message.channel.send(`Clan je izbacen`);
             }else{
-                message.reply('Molim te taguj koga zelis da kick');
+                message.reply('Molim te taguj koga zelis da izbacis');
             }
         }
     }
