@@ -87,6 +87,9 @@ client.on('message', message =>{
     if(command === "warns"){
         client.commands.get("warns").execute(message, args);
     }
+    if(command === "8ball"){
+        client.commands.get("8ball").run(message, args);
+    }
 });
 
 client.login(process.env.token);
