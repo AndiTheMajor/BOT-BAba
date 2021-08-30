@@ -5,7 +5,7 @@ module.exports = {
     description: "Ovo je _8ball komanda",
     run: async(client, message, args) => {
         let question = args.join(" ")
-        if(question) return message.reply("Molim te postavi pitanje")
+        if(!question) return message.reply("Molim te postavi pitanje")
         let responses = [
             "da", "ne", "izgleda ok", "naravno", "definitivno", "bolje da ti ne kazem", "Izgleda lose", "nema sanse", "samo danas", "ne danas", "nazalost da", "nazalost ne", "mozda", "pitaj me kasnije"
         ]
@@ -16,4 +16,3 @@ module.exports = {
         message.channel.send(embed)
     }
 }
-//join
