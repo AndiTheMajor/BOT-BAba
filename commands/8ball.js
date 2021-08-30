@@ -1,4 +1,4 @@
-const Command = require('../../BOT-BA/commands');
+const Command = require('../../commands');
 const { execute } = require('./izbaci');
 
 const Answers = [
