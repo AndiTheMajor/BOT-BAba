@@ -4,6 +4,7 @@ module.exports = {
     name: "8ball",
     description: "Ovo je _8ball komanda",
     async execute(message, args){
+        if(!args[0]) return message.reply('Molim te napisi pitanje');
         let answers = [
             'As I see it, yes.',
             'Ask again later.',
@@ -26,10 +27,15 @@ module.exports = {
             `Yes - definitely.`,
             `You may rely on it.`
         ] // This array holds the 20 original answers that was found on the icosahedron dice inside the magic 8 ball !
-        const BallNumber = Math.floor(Math.random() * answers.length); // We have to select a number that ranges in from 0 to the number of elements in the answers array
-        const delay = (msec) => new Promise((resolve) => setTimeout(resolve, msec)); //New promise to create a delay (in milliseconds) to wait before moving on.
-        msg = await message.channel.send(`Hmm, you ask a difficult questions!\nLet me think about it!`); // This sends a message to the channel and we await so we can edit the message later
-        await delay(4000); //We await for 4 seconds before an answer is given
-        msg.edit(answers[BallNumber]); //This simply edits the previously sent message, and instead gives you an answer from the answers array.
+        const BallNumber = Math.floor(Math.random() * answers.length); // We have to select a number that ranges in from 0 to the number of elements in the answers arra
+
+        const newEmbed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setAuthor(`8ball`)
+        .addField(`Pitanje: ${dMessage}`)
+        .addField("Odgovor", answers[answers])
+        
+        message.channel.send(newEmbed);
+
     }
 }
