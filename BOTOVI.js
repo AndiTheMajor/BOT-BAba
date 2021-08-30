@@ -90,7 +90,7 @@ client.on('message', message =>{
         client.commands.get("warns").execute(message, args);
     }
     if(command === "8ball"){
-        client.commands.get("8ball").run(message, args);
+        client.commands.get("8ball").execute(message, args);
     }
 });
 
