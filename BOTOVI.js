@@ -78,9 +78,6 @@ client.on('message', message =>{
     if(command === "pomoc-moderacija"){
         client.commands.get("pomoc-moderacija").execute(message, args, Discord);
     }
-    if(command == '8ball'){
-        client.commands.get('8ball').execute(message, args, Discord);
-    }
     if(command == 'gej'){
         client.commands.get('gej').execute(message, args);
     }
