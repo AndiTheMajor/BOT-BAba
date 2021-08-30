@@ -1,5 +1,4 @@
 const Command = require('../../commands');
-const { execute } = require('./izbaci');
 
 const Answers = [
     "da", "ne", "izgleda ok", "naravno", "definitivno", "bolje da ti ne kazem", "Izgleda lose", "nema sanse", "samo danas", "ne danas", "nazalost da", "nazalost ne", "mozda", "pitaj me kasnije"
