@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
+const welcome = require('./welcome')
 const prefix = '_';
 
 
@@ -96,3 +97,5 @@ client.on('message', message =>{
 });
 
 client.login(process.env.token);
+
+//welcome
