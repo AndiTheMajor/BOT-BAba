@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const { execute } = require('./kick');
 
 module.exports = {
     name: '8ball',
