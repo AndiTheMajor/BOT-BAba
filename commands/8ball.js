@@ -1,32 +1,3 @@
-.setDescription('Koje komande mozete koristiti')
-.addFields(
-    {name: 'Za zabavu', value: '_fanboy,_pedo,_ping,_avatar/_av,_meme!'},
-    {name: 'Za moderaciju', value: '_ban,_clear,_kick,_mute,_unmute,_warn!'},
-    
-)
-.setImage()
-.setFooter();
-
-message.channel.send(newEmbed);
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const Discord = require('discord.js')
 
