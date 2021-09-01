@@ -8,7 +8,7 @@ async execute(message, args) {
 if(!args[0]) return message.reply('Molim te napisi pitanje')
 let replies = ["da", "ne", "izgleda ok", "naravno", "definitivno", "bolje da ti ne kazem", "Izgleda lose", "nema sanse", "samo danas", "ne danas", "nazalost da", "nazalost ne", "mozda", "pitaj me kasnije"];
 
-let question = args.slice(0).join(" ");
+let question = args.slice().join(" ");
 let result = replies[Math.floor(Math.random() * replies.length)];
 let ballembed = new Discord.MessageEmbed()
 .setAuthor(`8 ball`)
