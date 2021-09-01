@@ -6,7 +6,7 @@ name: '8ball',
 description: "Ovo je _8ball komanda.",
 async execute(message, args) {
 if(!args[0]) return message.reply('Molim te napisi pitanje')
-let replies = ["da", "ne", "izgleda ok", "naravno", "definitivno", "bolje da ti ne kazem", "Izgleda lose", "nema sanse", "samo danas", "ne danas", "nazalost da", "nazalost ne", "mozda", "pitaj me kasnije"];
+let replies = ["Da", "Ne", "Izgleda ok", "Naravno", "Definitivno", "Bolje da ti ne kazem", "Izgleda lose", "Nema sanse", "Samo danas", "Ne danas", "Nazalost da", "Nazalost ne", "Mozda", "Pitaj me kasnije"];
 
 let question = args.slice(0).join(" ");
 let result = replies[Math.floor(Math.random() * replies.length)];
