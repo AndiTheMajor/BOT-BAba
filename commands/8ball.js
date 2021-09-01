@@ -12,8 +12,9 @@ let question = args.slice(0).join(" ");
 let result = replies[Math.floor(Math.random() * replies.length)];
 let ballembed = new Discord.MessageEmbed()
 .setAuthor(`8 ball`)
-.setColor("#1C1C1C")
+.setColor("RANDOM")
 .addField("Question", question)
+.addField(" ") 
 .addField("Answer", result)
 
 message.channel.send(ballembed);
