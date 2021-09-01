@@ -16,7 +16,7 @@ let ballembed = new Discord.MessageEmbed()
 .addField("Question", question)
 .addField("Answer", replies)
 
-message.channel.send(ballembed);
+message.channel.send(ballembed[replies]);
 }
 }
 //replies
