@@ -1,5 +1,6 @@
-const { DiscordAPIError } = require("discord.js");
-const { execute } = require("./8ball")
+const Discord = require("discord.js");
+
+
 
 module.exports = {
     name: 'test',
