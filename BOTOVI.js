@@ -93,6 +93,9 @@ client.on('message', message =>{
     if(command === "8ball"){
         client.commands.get("8ball").execute(message, args);
     }
+    if(command === "penis"){
+        client.commands.get("penis").execute(message, args, Discord);
+    }
 
 });
 
