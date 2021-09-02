@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'pomoc-zabava',
+    name: 'pomoc zabava',
     description: "Ovo su embeds",
     execute(message, args, Discord) {
         const newEmbed = new Discord.MessageEmbed()
