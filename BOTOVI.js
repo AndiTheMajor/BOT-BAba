@@ -75,11 +75,11 @@ client.on('message', message =>{
     if(command == 'mim'){
         client.commands.get('mim').execute(message, args);
     }
-    if(command === "pomoc zabava"){
-        client.commands.get("pomoc zabava").execute(message, args, Discord);
+    if(command === "pomoc-zabava"){
+        client.commands.get("pomoc-zabava").execute(message, args, Discord);
     }
-    if(command === "pomoc moderacija"){
-        client.commands.get("pomoc moderacija").execute(message, args, Discord);
+    if(command === "pomoc-moderacija"){
+        client.commands.get("pomoc-moderacija").execute(message, args, Discord);
     }
     if(command == 'gej'){
         client.commands.get('gej').execute(message, args);
