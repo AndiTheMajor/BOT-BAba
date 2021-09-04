@@ -24,6 +24,6 @@ const exampleEmbed = new MessageEmbed()
 .setTimestamp()
 .setFooter('Some footer text here', 'https://i.imgur.com/AfFp7pu.png');
 
-channel.send({ embeds: [exampleEmbed] });
+channel.send(exampleEmbed);
     }
 }
