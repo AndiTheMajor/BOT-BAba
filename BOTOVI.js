@@ -2,8 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const config = require('./config.json')
-const mongo = require('./mongo')
+
 
 
 
@@ -27,14 +26,6 @@ for(const file of commandFiles){
     
 client.once('ready', async () => {
     console.log('Andrijica is online!');
-
-    await mongo().then(mongoose => {
-        try {
-            console.log('Povezan na mongo')
-        } finally{
-            mongoose.connection.close()
-        }
-    })
 });
 
 client.on('message', message =>{
@@ -110,8 +101,8 @@ client.on('message', message =>{
     if(command === "penis"){
         client.commands.get("penis").execute(message, args, Discord);
     }
-    if(command === 'warn'){
-        client.commands.get('warn').execute(message, args);
+    if(command === 'vesanje'){
+        client.commands.get('vesanje').execute(message, args);
     }
 });
 
