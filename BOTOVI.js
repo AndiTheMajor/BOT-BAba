@@ -44,12 +44,6 @@ client.on('message', message =>{
     if(command === 'obrisi'){
         client.commands.get('obrisi').execute(message, args);
     }
-    if(command === 'pedo'){
-        client.commands.get('pedo').execute(message, args);
-    }
-    if(command === 'fanboy'){
-        client.commands.get('fanboy').execute(message, args);
-    }
     if(command === 'pomoc'){
         client.commands.get('pomoc').execute(message, args, Discord);
     }
@@ -64,12 +58,6 @@ client.on('message', message =>{
     }
     if(command === 'unmute'){
         client.commands.get('unmute').execute(message, args);
-    }
-    if(command === 'infractions'){
-        client.commands.get('infractions').execute(message, args);
-    }
-    if(command === 'upozori'){
-        client.commands.get('upozori').execute(message, args);
     }
     if(command == 'avatar'){
         client.commands.get('avatar').execute(message, args);
@@ -92,17 +80,11 @@ client.on('message', message =>{
     if(command === "simp"){
         client.commands.get("simp").execute(message, args);
     }
-    if(command === "warns"){
-        client.commands.get("warns").execute(message, args);
-    }
     if(command === "8ball"){
         client.commands.get("8ball").execute(message, args);
     }
     if(command === "penis"){
         client.commands.get("penis").execute(message, args, Discord);
-    }
-    if(command === 'vesanje'){
-        client.commands.get('vesanje').execute(message, args);
     }
 });
 
