@@ -111,17 +111,6 @@ client.login(process.env.token);
 
 
 
-
-
-
-
-
-
-
-
-const Discord = require("discord.js");
-const client = new Discord.Client();
-
 var usage = "`!hangman <channel id> <your phrase>`\n`Example: !hangman 368845035560763402 grandest nan is the man`";
 var letters = ["🇦", "🇧", "🇨", "🇩", "🇪", "🇫", "🇬", "🇭", "🇮", "🇯", "🇰", "🇱", "🇲", "🇳", "🇴", "🇵", "🇶", "🇷", "🇸", "🇹", "🇺", "🇻", "🇼", "🇽", "🇾", "🇿"];
 var unicode = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -284,3 +273,4 @@ client.on('message', msg => {
         }
     }
 });
+
