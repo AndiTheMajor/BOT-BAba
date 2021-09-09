@@ -11,7 +11,6 @@ module.exports = {
         const hang = new hangman({
             message: message,
             word: word,
-            client: client,
             channelID: channel.id,
         })
 
