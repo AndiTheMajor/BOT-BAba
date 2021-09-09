@@ -7,9 +7,9 @@ module.exports = {
     execute(message, args) {
         // inside a command, event listener, etc.
 const exampleEmbed = new MessageEmbed()
-.setColor('#0099ff')
-.setTitle('Test komanda')
-.setURL('https://discord.js.org/')
+    .setColor('#0099ff')
+    .setTitle('Test komanda')
+    .setURL('https://discord.js.org/')
 .setAuthor('Some name', 'https://i.imgur.com/AfFp7pu.png', 'https://discord.js.org')
 .setDescription('Ovo je embed test')
 .setThumbnail('https://i.imgur.com/AfFp7pu.png')
@@ -27,3 +27,4 @@ const exampleEmbed = new MessageEmbed()
 message.channel.send(exampleEmbed);
     }
 }
+//
