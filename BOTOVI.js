@@ -180,7 +180,7 @@ var stages = [`\`\`\`
 `];
 
 client.on('ready', () => {
-    client.user.setGame("!hangman");
+    client.user.setGame("_hangman");
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
